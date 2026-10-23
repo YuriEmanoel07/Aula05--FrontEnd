@@ -1,1 +1,39 @@
-<p>cadastrar-produto works!</p>
+<h1 class="my-3 text-primary">Cadastrar Produto</h1>
+<div class="card shadow">
+  <form class="m-3">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <label for="nome">Nome do Produto: </label>
+          <input type="text" class="form-control" placeholder="Digite o nome do Produto" />
+        </div>
+      </div>
+    </div>
+    <!--Fim do row Nome-->
+    <div class="row">
+      <div class="col-md-6">
+
+          <label for="Validade">Validade do Produto: </label>
+          <input type="date" class="form-control" />
+
+      </div>
+      <div class="col-md-6">
+
+          <label for="precoProduto">Preço do Produto: </label>
+          <input type="number" class="form-control" placeholder="0.00" />
+
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col">
+        <button class="btn btn-default" routerLink="/produtos">
+          Voltar
+        </button>
+        <button class="btn btn-success float-end">
+          Salvar
+        </button>
+      </div>
+    </div>
+  </form>
+</div>

@@ -8,10 +8,22 @@ import { Footer } from './template/footer/footer';
 import { Home } from './components/home/home';
 import { ListarProdutos } from './components/produtos/listar-produtos/listar-produtos';
 import { CadastrarProduto } from './components/produtos/cadastrar-produto/cadastrar-produto';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [App, Header, Footer, Home, ListarProdutos, CadastrarProduto],
-  imports: [BrowserModule, AppRoutingModule],
+  declarations: [
+    App,
+    Header,
+    Footer,
+    Home,
+    ListarProdutos,
+    CadastrarProduto
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule
+  ],
   providers: [provideBrowserGlobalErrorListeners()],
   bootstrap: [App],
 })
