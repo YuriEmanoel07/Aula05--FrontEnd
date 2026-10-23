@@ -6,4 +6,15 @@ import { Component } from '@angular/core';
   styleUrl: './cadastrar-produto.css',
   templateUrl: './cadastrar-produto.html',
 })
-export class CadastrarProduto {}
+export class CadastrarProduto {
+  nome : string = '';
+  validade : string = '';
+  preco : number =0;
+
+  salvarProduto():void{
+    console.log('Nome: ', this.nome);
+    console.log('Validade: ', this.validade);
+    console.log('Preço: ', this.preco);
+    alert('Salvo com sucesso!')
+  };
+}
