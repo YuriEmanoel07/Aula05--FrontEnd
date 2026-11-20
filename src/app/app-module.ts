@@ -1,4 +1,4 @@
-import { NgModule, provideBrowserGlobalErrorListeners } from '@angular/core';
+import { LOCALE_ID, NgModule, provideBrowserGlobalErrorListeners } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing-module';
@@ -9,6 +9,8 @@ import { Home } from './components/home/home';
 import { ListarProdutos } from './components/produtos/listar-produtos/listar-produtos';
 import { CadastrarProduto } from './components/produtos/cadastrar-produto/cadastrar-produto';
 import { FormsModule } from '@angular/forms';
+import { SharedModule } from './shared/shared-module';
+import { provideHttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,9 +24,14 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    SharedModule
   ],
-  providers: [provideBrowserGlobalErrorListeners()],
+  providers: [
+    provideBrowserGlobalErrorListeners(),
+    {provide: LOCALE_ID, useValue: 'pt-BR'},
+    provideHttpClient(),
+  ],
   bootstrap: [App],
 })
 export class AppModule {}

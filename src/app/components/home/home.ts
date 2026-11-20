@@ -15,6 +15,7 @@ export class Home {
   precoProduto:number = 2.59;
   promocao:boolean = true;
   foto:string = "img/crud.png";
+  dataValidade:string = '';
 
 
 

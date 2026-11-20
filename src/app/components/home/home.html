@@ -1,30 +1,21 @@
-<h1>Seja bem vindo ao  curso de Angular</h1>
+<h1>Seja bem vindo ao curso de Angular</h1>
 <h4 class="text-danger">{{anuncio}}</h4>
-<div class="card" style="width: 18rem;">
-  <img [src]="foto">
-  <div class="card-body">
-    <h5 class="card-title">
-      {{nomeProduto}}
-      <!-- VERSÃO DE DIRETIVA ANTES DO ANGULAR 17
-       <span *ngIf = "promocao; else elseBlock"class="badge text-bg-success">PROMOÇÃO</span>
-      <ng-template #elseBlock>
-        <span>APROVEITE</span>
 
-
-      </ng-template>-->
-       @if (promocao) {
-        <span class="badge text-bg-success">PROMOÇÃO</span>
-       }
-        @else {
-            <span class="badge text-bg-primary">
-              APROVEITE
-            </span>
-        }
-    </h5>
-    <p class="card-text">Identificação: {{idProduto}}</p>
-    <a href="#" class="btn btn-primary float-end">R$ {{precoProduto}}</a>
+<div class="row">
+  <div class="col">
+     <app-card-produto
+    [foto]="foto"
+    [nomeProduto]="nomeProduto"
+    [promocao]="promocao"
+    [idProduto]="idProduto"
+    [dataValidade]="dataValidade"
+    [precoProduto]="precoProduto"></app-card-produto>
 
   </div>
+  <div class="col">
+    <app-card-produto
+      foto="https://www.rockstargames.com/VI/_next/static/media/an-extended-look.0ijbsha5fo1te.jpg?akim=1&imdensity=1&imwidth=3840"
+      nomeProduto="GTA VI" [promocao]="promocao" [idProduto]="idProduto" [dataValidade]="dataValidade"
+      [precoProduto]="550"></app-card-produto>
+  </div>
 </div>
-
-
